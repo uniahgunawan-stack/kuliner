@@ -11,7 +11,7 @@ interface ProductModalProps {
   onClose: () => void;
 }
 
-const phoneNumber = '085721085452' ;
+const phoneNumber = '6285721085452' ;
 const whatsAppMessage =
     "Halo, saya ingin memesan .";
 export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {

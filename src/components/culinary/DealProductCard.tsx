@@ -10,7 +10,7 @@ interface DealProductCardProps {
 export function DealProductCard({ product }: DealProductCardProps) {
   return (
     <div className=" bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-2">
-      <div className="relative w-full h-40 rounded-full overflow-hidden mb-2">
+      <div className="relative w-full h-40 rounded-full ld:rounded-lg overflow-hidden mb-2">
         <Image
           src={product.image}
           alt={product.name}

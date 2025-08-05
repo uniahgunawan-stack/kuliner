@@ -6,14 +6,12 @@ import { CulinaryFooter } from "@/components/culinary/CulinaryFooter";
 import { ProductCard } from "@/components/culinary/ProductCard";
 import { ProductModal } from "@/components/culinary/ProductModal";
 import { CulinaryHero } from "@/components/culinary/CulinaryHero";
-import { CategorySidebar } from "@/components/culinary/CategorySidebar";
 import { products, Product } from "@/lib/culinary-data";
 import Image from "next/image";
 
 export default function CulinaryLandingPage() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const handleProductClick = (product: Product) => {
     setSelectedProduct(product);
@@ -25,12 +23,8 @@ export default function CulinaryLandingPage() {
     setSelectedProduct(null);
   };
 
-  const filteredProducts = useMemo(() => {
-    if (!selectedCategory) {
-      return products;
-    }
-    return products.filter(product => product.category === selectedCategory);
-  }, [selectedCategory]);
+  // Ambil beberapa produk untuk ditampilkan di halaman utama
+  const featuredProducts = useMemo(() => products.slice(0, 4), []); // Ambil 4 produk pertama sebagai contoh
 
   return (
     <div className="min-h-screen flex flex-col bg-yellow-100 text-gray-800">
@@ -46,26 +40,20 @@ export default function CulinaryLandingPage() {
           </p>
         </section>
 
-        {/* Menu Section */}
-        <section id="menu" className="bg-white p-6 rounded-lg shadow-md">
+        {/* Featured Products Section (Inline) */}
+        <section className="bg-white p-6 rounded-lg shadow-md mb-8">
           <div className="text-center mb-8">
-            <p className="text-orange-600 font-semibold text-lg">Our Menu</p>
-            <h2 className="text-4xl font-bold text-gray-800">Discover Menu</h2>
+            <p className="text-orange-600 font-semibold text-lg">Our Favorites</p>
+            <h2 className="text-4xl font-bold text-gray-800">Featured Dishes</h2>
           </div>
-          <div className="flex flex-col md:flex-row gap-6">
-            <CategorySidebar
-              onSelectCategory={setSelectedCategory}
-              selectedCategory={selectedCategory}
-            />
-            <div className="flex-grow grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
-              {filteredProducts.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  onClick={handleProductClick}
-                />
-              ))}
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {featuredProducts.map((product) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                onClick={handleProductClick}
+              />
+            ))}
           </div>
         </section>
       </main>

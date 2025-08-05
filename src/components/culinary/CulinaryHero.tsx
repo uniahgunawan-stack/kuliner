@@ -75,34 +75,6 @@ export function CulinaryHero() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
-          {/* Search and Category */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mb-8">
-            <Select>
-              <SelectTrigger className="w-full sm:w-[180px] bg-white text-gray-800 border-none shadow-sm">
-                <SelectValue placeholder="Categories" />
-              </SelectTrigger>
-              <SelectContent className="bg-white text-gray-800">
-                <SelectItem value="pizza">Pizza</SelectItem>
-                <SelectItem value="burger">Burger</SelectItem>
-                <SelectItem value="noodles">Noodles</SelectItem>
-                <SelectItem value="soft-drinks">Soft Drinks</SelectItem>
-                <SelectItem value="cakes">Cakes</SelectItem>
-                <SelectItem value="other">Other</SelectItem>
-              </SelectContent>
-            </Select>
-            <div className="relative flex-grow">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
-              <Input
-                type="text"
-                placeholder="Search"
-                className="w-full pl-10 pr-4 py-2 rounded-md bg-white text-gray-800 border-none shadow-sm"
-              />
-            </div>
-            <Button className="bg-yellow-400 hover:bg-yellow-500 text-red-800 font-bold px-6 py-2 rounded-md shadow-sm">
-              Check
-            </Button>
-          </div>
-
           {/* Deal Of The Day */}
           <div className="w-full">
             <h3 className="text-xl font-bold mb-4">

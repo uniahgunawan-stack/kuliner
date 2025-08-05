@@ -13,17 +13,17 @@ export function CulinaryHeader() {
         <nav className="flex items-center space-x-6">
           <ul className="flex space-x-4">
             <li>
-              <Link href="#" className="hover:underline">
+              <Link href="/culinary" className="hover:underline">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="#about" className="hover:underline">
+              <Link href="/culinary#about" className="hover:underline">
                 About
               </Link>
             </li>
             <li>
-              <Link href="#menu" className="hover:underline">
+              <Link href="/culinary/menu" className="hover:underline">
                 Menu
               </Link>
             </li>

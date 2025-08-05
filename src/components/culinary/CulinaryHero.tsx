@@ -65,33 +65,45 @@ export function CulinaryHero() {
       </div>
 
       <div className="container mx-auto relative z-10 flex flex-col lg:flex-row items-center lg:items-start justify-between px-4">
-        {/* Left Content */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl lg:w-1/2 mb-10 lg:mb-0">
-          <p className="text-lg font-semibold mb-2">Do Not Miss It!</p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4">
-            Pizza Taste Better Than Skinny Feels.
-          </h1>
-          <p className="text-base md:text-lg mb-8 max-w-md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+        {/* Main content area: Banner + Text/Deal */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-start w-full lg:gap-8"> {/* Added lg:gap-8 for spacing */}
+          {/* Banner Section */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start mb-8 lg:mb-0">
+            <Image
+              src="/culinary-banner.jpg"
+              alt="Special Offer Banner"
+              width={500}
+              height={300}
+              className="rounded-lg shadow-lg w-full max-w-md lg:max-w-full object-cover"
+            />
+          </div>
 
-          {/* Deal Of The Day */}
-          <div className="w-full">
-            <h3 className="text-xl font-bold mb-4">
-              Deal Of The Day. <span className="text-yellow-400">{formatTime(timeLeft.hours)} : {formatTime(timeLeft.minutes)} : {formatTime(timeLeft.seconds)}</span>
-            </h3>
-            <div className="grid grid-cols-4 gap-4"> {/* Changed to grid grid-cols-4 */}
-              {dealProducts.map((product) => (
-                <DealProductCard key={product.id} product={product} />
-              ))}
+          {/* Text Content and Deal of the Day */}
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:w-1/2"> {/* Removed max-w-2xl, adjusted width */}
+            <p className="text-lg font-semibold mb-2">Do Not Miss It!</p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+              Pizza Taste Better Than Skinny Feels.
+            </h1>
+            <p className="text-base md:text-lg mb-8 max-w-md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+
+            {/* Deal Of The Day */}
+            <div className="w-full">
+              <h3 className="text-xl font-bold mb-4">
+                Deal Of The Day. <span className="text-yellow-400">{formatTime(timeLeft.hours)} : {formatTime(timeLeft.minutes)} : {formatTime(timeLeft.seconds)}</span>
+              </h3>
+              <div className="grid grid-cols-4 gap-4">
+                {dealProducts.map((product) => (
+                  <DealProductCard key={product.id} product={product} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Right Content (Scooter and Pizza are handled by absolute positioning) */}
-        <div className="lg:w-1/2 hidden lg:block">
-          {/* This div acts as a spacer/container for the absolutely positioned images */}
-        </div>
+        {/* The original right content spacer is no longer needed if the banner takes its place.
+            The absolute images are independent of this flow. */}
       </div>
     </section>
   );

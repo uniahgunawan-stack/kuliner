@@ -53,14 +53,14 @@ export function CulinaryHero() {
           alt="Pizza Slice"
           width={400}
           height={400}
-          className="absolute -left-20 top-1/2 -translate-y-1/2 opacity-30 md:opacity-100 hidden sm:block"
+          className="absolute -left-40 top-1/2 -translate-y-1/2 opacity-30 md:opacity-100 hidden md:block" // Disesuaikan: -left-40 dan hidden md:block
         />
         <Image
           src="/scooter.png" // Placeholder for scooter
           alt="Delivery Scooter"
           width={600}
           height={600}
-          className="absolute -right-40 bottom-0 md:bottom-10 lg:bottom-0 xl:bottom-0 opacity-80 md:opacity-100"
+          className="absolute -right-60 bottom-0 md:bottom-10 lg:bottom-0 xl:bottom-0 opacity-80 md:opacity-100 hidden md:block" // Disesuaikan: -right-60 dan hidden md:block
         />
       </div>
 

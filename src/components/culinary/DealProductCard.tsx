@@ -9,7 +9,7 @@ interface DealProductCardProps {
 
 export function DealProductCard({ product }: DealProductCardProps) {
   return (
-    <Card className="w-full max-w-[180px] bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-2">
+    <Card className="w-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-2"> {/* Removed max-w-[180px] */}
       <div className="relative w-24 h-24 rounded-full overflow-hidden mb-2">
         <Image
           src={product.image}

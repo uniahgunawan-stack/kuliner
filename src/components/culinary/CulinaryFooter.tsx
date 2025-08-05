@@ -6,8 +6,8 @@ export function CulinaryFooter() {
     <footer className="w-full bg-orange-500 text-white p-6 mt-8">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
         <div className="mb-4 md:mb-0">
-          <h3 className="text-lg font-semibold mb-2">Nama Toko Kuliner</h3>
-          <p>Jl. Contoh No. 123, Kota Contoh, Indonesia</p>
+          <h3 className="text-lg font-semibold mb-2">Fiat Sea Food</h3>
+          <p>Kp gunung jaya RT 03 Rw 01 Desa Gunung Jaya, Cisaat Sukabumi</p>
         </div>
         <div className="mb-4 md:mb-0">
           <h3 className="text-lg font-semibold mb-2">Ikuti Kami</h3>
@@ -28,7 +28,7 @@ export function CulinaryFooter() {
           <p className="flex items-center justify-center md:justify-start gap-1">
             <MessageCircle size={20} /> WhatsApp: <Link href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="hover:underline">+62 812-3456-7890</Link>
           </p>
-          <p>Email: info@namatoko.com</p>
+          <p>Email: Abi_Shaila_Syafiq@gmail.com</p>
         </div>
       </div>
     </footer>

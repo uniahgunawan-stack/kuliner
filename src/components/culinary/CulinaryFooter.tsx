@@ -26,7 +26,7 @@ export function CulinaryFooter() {
         <div>
           <h3 className="text-lg font-semibold mb-2">Kontak Kami</h3>
           <p className="flex items-center justify-center md:justify-start gap-1">
-            <MessageCircle size={20} /> WhatsApp: <Link href="https://wa.me/6285721085452" target="_blank" rel="noopener noreferrer" className="hover:underline">+62 812-3456-7890</Link>
+            <MessageCircle size={20} /> WhatsApp: <Link href="https://wa.me/6285721085452" target="_blank" rel="noopener noreferrer" className="hover:underline">+62 857-2108-5452</Link>
           </p>
           <p>Email: Abi_Shaila_Syafiq@gmail.com</p>
         </div>

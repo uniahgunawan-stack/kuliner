@@ -3,6 +3,7 @@ import { Product } from "@/lib/culinary-data";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
+import { FaWhatsapp } from 'react-icons/fa';
 
 interface ProductModalProps {
   product: Product | null;
@@ -10,9 +11,12 @@ interface ProductModalProps {
   onClose: () => void;
 }
 
+const phoneNumber = '085721085452' ;
+const whatsAppMessage =
+    "Halo, saya ingin memesan .";
 export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
   if (!product) return null;
-
+const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsAppMessage)}`;
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px] p-6 bg-white rounded-lg shadow-lg">
@@ -27,8 +31,10 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
             <Image
               src={product.image}
               alt={product.name}
-              layout="fill"
-              objectFit="cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
+              priority={true}
             />
           </div>
           <div className="flex items-center justify-between text-gray-800">
@@ -40,8 +46,10 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
           </div>
           <p className="text-gray-700 text-sm leading-relaxed">{product.description}</p>
         </div>
-        <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-md">
-          Pesan Sekarang
+        <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-md"
+          onClick={() => window.open(whatsappUrl, "_blank")}>
+          <FaWhatsapp className="h-8 w-8 md:w-10 md:h-10" />
+                Pesan sekarang
         </Button>
       </DialogContent>
     </Dialog>

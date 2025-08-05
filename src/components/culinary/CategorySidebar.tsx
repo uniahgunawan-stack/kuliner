@@ -11,12 +11,11 @@ interface CategorySidebarProps {
 
 export function CategorySidebar({ onSelectCategory, selectedCategory }: CategorySidebarProps) {
   const categories = [
-    { name: "All", icon: Utensils },
-    { name: "Pizza", icon: Pizza },
-    { name: "Burger", icon: Hamburger }, // Mengganti Burger dengan Hamburger
-    { name: "Soft Drinks", icon: Coffee },
-    { name: "Noodles", icon: Soup },
-    { name: "Cakes", icon: Cake },
+    { name: "Bakso", icon: Utensils },
+    { name: "Menu Special", icon: Pizza },
+    { name: "Sea food", icon: Hamburger },
+    { name: "Minuman", icon: Coffee },
+    { name: "Menu lainya", icon: Cake },
   ];
 
   return (

@@ -5,107 +5,107 @@ export type Product = {
   image: string;
   description: string;
   rating: number;
-  category: "Pizza" | "Burger" | "Soft Drinks" | "Noodles" | "Cakes" | "Other";
+  category: "Bakso" | "Menu Special" | "Sea food" | "Minuman" | "Menu lainya";
 };
 
 export const products: Product[] = [
   {
     id: "1",
-    name: "Nasi Goreng Spesial",
+    name: "Cumi Goreng Spesial",
     price: 25000,
-    image: "/placeholder-food-1.jpg", // Placeholder image
-    description: "Nasi goreng lezat dengan bumbu rahasia, telur, ayam, dan kerupuk.",
+    image: "/menu1.jpeg", // Placeholder image
+    description: "Cumi goreng tepung renyah dengan bumbu spesial, disajikan dengan sambal.",
     rating: 4.5,
-    category: "Other",
+    category: "Menu Special",
   },
   {
     id: "2",
     name: "Mie Ayam Bakso",
     price: 22000,
-    image: "/placeholder-food-2.jpg", // Placeholder image
-    description: "Mie ayam dengan topping bakso sapi kenyal dan pangsit renyah.",
+    image: "/menu.jpeg", // Placeholder image
+    description: "Mie ayam dengan bakso daging sapi, disajikan dengan kuah kaldu yang gurih.",
     rating: 4.7,
-    category: "Noodles",
+    category: "Bakso",
   },
   {
     id: "3",
-    name: "Sate Ayam Madura",
+    name: "ikan bakar",
     price: 30000,
-    image: "/placeholder-food-3.jpg", // Placeholder image
-    description: "Sate ayam empuk dengan bumbu kacang khas Madura, disajikan dengan lontong.",
+    image: "/ikan bakar.jpg", // Placeholder image
+    description: "Ikan bakar segar dengan bumbu rempah khas, disajikan dengan sambal dan nasi.",
     rating: 4.8,
-    category: "Other",
+    category: "Sea food",
   },
   {
     id: "4",
-    name: "Sop Buntut",
+    name: "Cumi bakar",
     price: 35000,
-    image: "/placeholder-food-4.jpg", // Placeholder image
-    description: "Sop buntut sapi yang kaya rasa, empuk, dan disajikan hangat.",
+    image: "/menu.jpeg", // Placeholder image
+    description: "Cumi bakar dengan bumbu kecap manis, disajikan dengan nasi dan lalapan.",
     rating: 4.6,
-    category: "Other",
+    category: "Sea food",
   },
   {
     id: "5",
-    name: "Gado-Gado",
+    name: "Mie ayam pangsit",
     price: 20000,
-    image: "/placeholder-food-5.jpg", // Placeholder image
-    description: "Salad sayuran segar dengan bumbu kacang pedas manis.",
+    image: "/mie ayam baso.jpg", // Placeholder image
+    description: "Mie ayam dengan pangsit goreng renyah, disajikan dengan kuah kaldu yang lezat.",
     rating: 4.3,
-    category: "Other",
+    category: "Menu Special",
   },
   {
     id: "6",
     name: "Ayam Bakar",
     price: 28000,
-    image: "/placeholder-food-6.jpg", // Placeholder image
+    image: "/menu.jpeg", // Placeholder image
     description: "Ayam bakar bumbu rempah, disajikan dengan sambal dan lalapan.",
     rating: 4.9,
-    category: "Other",
+    category: "Menu lainya",
   },
   {
     id: "7",
-    name: "Es Teh Manis",
+    name: "es teh manis",
     price: 8000,
-    image: "/placeholder-drink-1.jpg", // Placeholder image
+    image: "/estehmanis.jpg", // Placeholder image
     description: "Es teh segar pelepas dahaga.",
     rating: 4.2,
-    category: "Soft Drinks",
+    category: "Minuman",
   },
   {
     id: "8",
     name: "Jus Alpukat",
     price: 15000,
-    image: "/placeholder-drink-2.jpg", // Placeholder image
+    image: "/jusalfukat.jpg", // Placeholder image
     description: "Jus alpukat creamy dan manis.",
     rating: 4.4,
-    category: "Soft Drinks",
+    category: "Minuman",
   },
   {
     id: "9",
-    name: "Classic Pepperoni Pizza",
+    name: "Bakso Ikan tuna",
     price: 45000,
-    image: "/placeholder-food-1.jpg",
+    image: "/menu.jpeg",
     description: "Pizza klasik dengan topping pepperoni melimpah.",
     rating: 4.6,
-    category: "Pizza",
+    category: "Menu Special",
   },
   {
     id: "10",
-    name: "Cheeseburger Deluxe",
+    name: "Telur Bebek",
     price: 38000,
-    image: "/placeholder-food-2.jpg",
+    image: "/menu1.jpeg",
     description: "Burger dengan patty daging sapi, keju leleh, dan sayuran segar.",
     rating: 4.5,
-    category: "Burger",
+    category: "Menu lainya",
   },
   {
     id: "11",
-    name: "Chocolate Fudge Cake",
+    name: "Telur Ayam",
     price: 28000,
-    image: "/placeholder-food-3.jpg",
+    image: "/menu1.jpeg",
     description: "Kue cokelat lembut dengan lapisan fudge yang kaya.",
     rating: 4.7,
-    category: "Cakes",
+    category: "Menu lainya",
   },
 ];

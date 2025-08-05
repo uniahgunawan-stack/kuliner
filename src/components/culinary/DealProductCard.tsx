@@ -9,13 +9,15 @@ interface DealProductCardProps {
 
 export function DealProductCard({ product }: DealProductCardProps) {
   return (
-    <Card className="w-full bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-2"> {/* Removed max-w-[180px] */}
-      <div className="relative w-24 h-24 rounded-full overflow-hidden mb-2">
+    <div className=" bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center p-2">
+      <div className="relative w-full h-40 rounded-full overflow-hidden mb-2">
         <Image
           src={product.image}
           alt={product.name}
-          layout="fill"
-          objectFit="cover"
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100px, (min-width: 769px) 150px"
+          priority={true}
         />
       </div>
       <CardContent className="p-0 text-center">
@@ -32,6 +34,6 @@ export function DealProductCard({ product }: DealProductCardProps) {
         </div>
         <p className="text-orange-600 font-bold text-lg">Rp {product.price.toLocaleString("id-ID")}</p>
       </CardContent>
-    </Card>
+    </div>
   );
 }

@@ -6,9 +6,9 @@ export function CulinaryHeader() {
   return (
     <header className="w-full bg-gradient-to-r from-red-600 to-orange-600 text-white p-4 shadow-md">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
-        <Link href="/culinary" className="flex items-center gap-2 text-2xl font-bold mb-2 sm:mb-0">
-          <Image src="/fastfood-logo.png" alt="FastFood Delivery Logo" width={40} height={40} />
-          FastFood Delivery
+        <Link href="/culinary" className=" flex items-center gap-2 text-xl font-bold mb-2 sm:mb-0">
+          <Image src="/fastfood-logo.jpg" className="rounded-lg w-auto" alt="FastFood Delivery Logo" width={40} height={40}  />
+          Fiat Seafood Delivery
         </Link>
         <nav className="flex items-center space-x-6">
           <ul className="flex space-x-4">

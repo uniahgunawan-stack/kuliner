@@ -34,18 +34,18 @@ export default function CulinaryMenuPage() {
     <div className="min-h-screen flex flex-col bg-yellow-100 text-gray-800">
       <CulinaryHeader />
 
-      <main className="flex-grow container mx-auto p-4 sm:p-8">
-        <section id="menu" className="bg-white p-6 rounded-lg shadow-md">
+      <main className="flex-grow container mx-auto p-4 sm:p-4">
+        <section id="menu" className="rounded-lg">
           <div className="text-center mb-8">
             <p className="text-orange-600 font-semibold text-lg">Our Menu</p>
             <h2 className="text-4xl font-bold text-gray-800">Discover Menu</h2>
           </div>
-          <div className="flex flex-col md:flex-row gap-6">
+          <div className="flex flex-col md:flex-row gap-4">
             <CategorySidebar
               onSelectCategory={setSelectedCategory}
               selectedCategory={selectedCategory}
             />
-            <div className="flex-grow grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
+            <div className="flex-grow grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
               {filteredProducts.map((product) => (
                 <ProductCard
                   key={product.id}
